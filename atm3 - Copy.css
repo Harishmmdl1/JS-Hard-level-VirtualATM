@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #49f7ed, #bce149);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#atm-machine {
+  background-color: #f7f9fb;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#screen {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  margin-top: 0;
+  color: #141e30;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #141e30;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #141e30;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #eabc6d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ab6f08;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+#menu-screen button {
+  width: calc(100% - 10px);
+  margin: 5px;
+}
+
+#balance-screen h4,
+#account-details-screen h4,
+#mini-statement {
+  color: #141e30;
+  text-align: center;
+}
+
+#transaction {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: black;
+  text-align: center;
+}
+
+/* New CSS for the new screens */
+
+#mini-statement {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #141e30;
+  border-radius: 5px;
+  background-color: #f7f9fb;
+}
+
+.statement-box {
+  height: 150px;
+  overflow-y: auto;
+}
+
+#transaction-successful-page-data {
+  color: #28a745;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #49f7ed, #bce149);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#atm-machine {
+  background-color: #f7f9fb;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#screen {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  margin-top: 0;
+  color: #141e30;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #141e30;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #141e30;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #eabc6d;;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ab6f08;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+#menu-screen button {
+  width: calc(100% - 10px);
+  margin: 5px;
+}
+
+#balance-screen h4,
+#account-details-screen h4,
+#mini-statement {
+  color: #141e30;
+  text-align: center;
+}
+
+#transaction {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: black;
+  text-align: center;
+} */
+
+/* New CSS for the new screens */
+/* 
+#mini-statement {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #141e30;
+  border-radius: 5px;
+  background-color: #f7f9fb;
+} */

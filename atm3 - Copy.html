@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual ATM</title>
+    <link rel="stylesheet" href="atm3 - Copy.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="atm-machine">
+      <div id="screen">
+
+        <div id="login-screen">
+          <h2>Welcome to Virtual ATM</h2>
+          <label for="username">Enter AccountNumber</label>
+          <input type="text" id="username" placeholder="User Name" />
+          <label for="password">Enter Password</label>
+          <input type="password" id="password" placeholder="Password" />
+          <button onclick="login()">Login</button>
+          <p id="login-error" class="error"></p>
+        </div>
+
+        <div id="menu-screen" class="hidden">
+          <h2 id="greeting"></h2>
+          <h2>ATM Menu</h2>
+          <button onclick="handleWithdrawal()">Withdraw</button>
+          <button onclick="handleDeposit()">Deposit</button>
+          <button onclick="handleBalanceEnquiry()">Balance Enquiry</button>
+          <button onclick="handleAccountDetails()">Account Details</button>
+          <button onclick="handleChangePin()">Change PIN</button>
+          <button onclick="handleMiniStatement()">Mini Statement</button>
+          <button onclick="handleTransferFunds()">Transfer Funds</button>
+          <button onclick="handleOther()">Other</button>
+        </div>
+
+        <div id="withdrawal-screen" class="hidden">
+          <h2>Withdraw Money</h2>
+          <label for="withdraw-amount">Amount : </label>
+          <input type="number" id="withdraw-amount" />
+          <button onclick="withdraw()">Withdraw</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="withdrawal-error" class="error"></p>
+        </div>
+
+        <div id="deposit-screen" class="hidden">
+          <h2>Deposit Money</h2>
+          <label for="deposit-amount">Amount : </label>
+          <input type="number" id="deposit-amount" />
+          <button onclick="deposit()">Deposit</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="deposit-error" class="error"></p>
+        </div>
+
+        <div id="balance-screen" class="hidden">
+          <h2 id="transaction"></h2>
+          <h2>Balance Enquiry</h2>
+          <h4 id="balance-amount"></h4>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+
+        <div id="account-details-screen" class="hidden">
+          <h2>Account Details Enquiry</h2>
+          <h4 id="account-details"></h4>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+        
+        <div id="change-pin-screen" class="hidden">
+          <h2>Change PIN</h2>
+          <label for="old-pin">Old PIN:</label>
+          <input type="password" id="old-pin" placeholder="Old PIN" />
+          <label for="new-pin">New PIN:</label>
+          <input type="password" id="new-pin" placeholder="New PIN" />
+          <button onclick="changePin()">Change PIN</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="change-pin-error" class="error"></p>
+        </div>
+        
+        <div id="mini-statement-screen" class="hidden">
+          <h2>Mini Statement</h2>
+          <div id="mini-statement" class="statement-box"></div>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+        
+        <div id="transfer-funds-screen" class="hidden">
+          <h2>Transfer Funds</h2>
+          <label for="transfer-account">To Account Number:</label>
+          <input type="text" id="transfer-account" placeholder="Account Number" />
+          <label for="transfer-amount">Amount:</label>
+          <input type="number" id="transfer-amount" />
+          <button onclick="transferFunds()">Transfer</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="transfer-error" class="error"></p>
+        </div>
+
+        <div id="others-screen" class="hidden">
+          <h2>Others</h2>
+          <p>Other features coming soon...</p>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+
+        <div id="transaction-successful-page" class="hidden">
+          <h2>Transaction Successful</h2>
+          <p id="transaction-successful-page-data"></p>
+          <button onclick="handleBalanceEnquiry()">Balance Enquiry</button>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="atm3 - Copy.js"></script>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual ATM</title>
+    <link rel="stylesheet" href="/CSS/atm3 - Copy.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="atm-machine">
+      <div id="screen">
+
+        <div id="login-screen">
+          <h2>Welcome to Virtual ATM</h2>
+          <label for="username">Enter Username</label>
+          <input type="text" id="username" placeholder="User Name" />
+          <label for="password">Enter Password</label>
+          <input type="password" id="password" placeholder="Password" />
+          <button onclick="login()">Login</button>
+          <p id="login-error" class="error"></p>
+        </div>
+
+        <div id="menu-screen" class="hidden">
+          <h2 id="greeting"></h2>
+          <h2>ATM Menu</h2>
+          <button onclick="handleWithdrawal()">Withdraw</button>
+          <button onclick="handleDeposit()">Deposit</button>
+          <button onclick="handleBalanceEnquiry()">Balance Enquiry</button>
+          <button onclick="handleAccountDetails()">Account Details</button>
+          <button onclick="handleChangePin()">Change PIN</button>
+          <button onclick="handleMiniStatement()">Mini Statement</button>
+          <button onclick="handleTransferFunds()">Transfer Funds</button>
+          <button onclick="handleOther()">Other</button>
+        </div>
+
+        <div id="withdrawal-screen" class="hidden">
+          <h2>Withdraw Money</h2>
+          <label for="withdraw-amount">Amount : </label>
+          <input type="number" id="withdraw-amount" />
+          <button onclick="withdraw()">Withdraw</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="withdrawal-error" class="error"></p>
+        </div>
+
+        <div id="deposit-screen" class="hidden">
+          <h2>Deposit Money</h2>
+          <label for="deposit-amount">Amount : </label>
+          <input type="number" id="deposit-amount" />
+          <button onclick="deposit()">Deposit</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="deposit-error" class="error"></p>
+        </div>
+
+        <div id="balance-screen" class="hidden">
+          <h2 id="transaction"></h2>
+          <h2>Balance Enquiry</h2>
+          <h4 id="balance-amount"></h4>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+
+        <div id="account-details-screen" class="hidden">
+          <h2>Account Details Enquiry</h2>
+          <h4 id="account-details"></h4>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+        
+        <div id="change-pin-screen" class="hidden">
+          <h2>Change PIN</h2>
+          <label for="old-pin">Old PIN:</label>
+          <input type="password" id="old-pin" placeholder="Old PIN" />
+          <label for="new-pin">New PIN:</label>
+          <input type="password" id="new-pin" placeholder="New PIN" />
+          <button onclick="changePin()">Change PIN</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="change-pin-error" class="error"></p>
+        </div>
+        
+        <div id="mini-statement-screen" class="hidden">
+          <h2>Mini Statement</h2>
+          <div id="mini-statement"></div>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+        
+        <div id="transfer-funds-screen" class="hidden">
+          <h2>Transfer Funds</h2>
+          <label for="transfer-account">To Account Number:</label>
+          <input type="text" id="transfer-account" placeholder="Account Number" />
+          <label for="transfer-amount">Amount:</label>
+          <input type="number" id="transfer-amount" />
+          <button onclick="transferFunds()">Transfer</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="transfer-error" class="error"></p>
+        </div>
+
+        <div id="others-screen" class="hidden">
+          <h2>Others</h2>
+          <p>Other features coming soon...</p>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+
+        <div id="transaction-successful-page" class="hidden">
+          <h2>Transaction successful</h2>
+          <p id="transaction-successful-page-data"></p>
+          <button onclick="handleBalanceEnquiry()">Balance Enquiry</button>
+          <button onclick="goMenu()">Back To Main Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/JS/atm3 - Copy.js"></script>
+  </body>
+</html> -->
+
