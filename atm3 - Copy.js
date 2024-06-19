@@ -8,6 +8,14 @@ const accountData = {
   transactions: ["No Transaction Found"]
 };
 
+function credential() {
+
+  alert("Please make a note of Account Number and Password");
+  alert("Account Number - 123456");
+  alert("Password - password");
+}
+credential();
+
 function login() {
   const accountNumber = document.getElementById("username").value;
   const password = document.getElementById("password").value;
