@@ -16,7 +16,7 @@
 
         <div id="login-screen">
           <h2>Welcome to Virtual ATM</h2>
-          <label for="username">Enter AccountNumber</label>
+          <label for="username">Enter Username</label>
           <input type="text" id="username" placeholder="User Name" />
           <label for="password">Enter Password</label>
           <input type="password" id="password" placeholder="Password" />
@@ -29,11 +29,11 @@
           <h2>ATM Menu</h2>
           <button onclick="handleWithdrawal()">Withdraw</button>
           <button onclick="handleDeposit()">Deposit</button>
+          <button onclick="handleTransferFunds()">Transfer Funds</button>
           <button onclick="handleBalanceEnquiry()">Balance Enquiry</button>
+          <button onclick="handleMiniStatement()">Mini Statement</button>
           <button onclick="handleAccountDetails()">Account Details</button>
           <button onclick="handleChangePin()">Change PIN</button>
-          <button onclick="handleMiniStatement()">Mini Statement</button>
-          <button onclick="handleTransferFunds()">Transfer Funds</button>
           <button onclick="handleOther()">Other</button>
         </div>
 
@@ -41,15 +41,60 @@
           <h2>Withdraw Money</h2>
           <label for="withdraw-amount">Amount : </label>
           <input type="number" id="withdraw-amount" />
-          <button onclick="withdraw()">Withdraw</button>
+          <button onclick="generateWithdrawOtp()">Generate OTP</button>
+          <div id="withdraw-otp-section" class="hidden">
+            <label for="withdraw-otp">Enter OTP : </label>
+            <input type="number" id="withdraw-otp" />
+            <button onclick="withdraw()">Withdraw</button>
+          </div>
           <button onclick="goMenu()">Cancel</button>
           <p id="withdrawal-error" class="error"></p>
         </div>
+        
+        <!-- <div id="withdrawal-screen" class="hidden">
+          <h2>Withdraw Money</h2>
+          <label for="withdraw-amount">Amount : </label>
+          <input type="number" id="withdraw-amount" />
+          <button onclick="withdraw()">Withdraw</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="withdrawal-error" class="error"></p>
+        </div> -->
 
+        <!-- Transfer Funds Screen -->
+<div id="transfer-funds-screen" class="hidden">
+  <h2>Transfer Funds</h2>
+  <label for="transfer-account">To Account Number:</label>
+  <input type="text" id="transfer-account" placeholder="Account Number" />
+  <label for="transfer-amount">Amount:</label>
+  <input type="number" id="transfer-amount" />
+  <button onclick="generateTransferOtp()">Generate OTP</button>
+  <div id="transfer-otp-section" class="hidden">
+    <label for="transfer-otp">Enter OTP : </label>
+    <input type="number" id="transfer-otp" />
+    <button onclick="transferFunds()">Transfer</button>
+  </div>
+  <button onclick="goMenu()">Cancel</button>
+  <p id="transfer-error" class="error"></p>
+</div>
+
+        
+        <!-- <div id="transfer-funds-screen" class="hidden">
+          <h2>Transfer Funds</h2>
+          <label for="transfer-account">To Account Number:</label>
+          <input type="text" id="transfer-account" placeholder="Account Number" />
+          <label for="transfer-amount">Amount:</label>
+          <input type="number" id="transfer-amount" />
+          <button onclick="transferFunds()">Transfer</button>
+          <button onclick="goMenu()">Cancel</button>
+          <p id="transfer-error" class="error"></p>
+        </div> -->
+        
         <div id="deposit-screen" class="hidden">
           <h2>Deposit Money</h2>
           <label for="deposit-amount">Amount : </label>
           <input type="number" id="deposit-amount" />
+          <label for="deposit-pin">Enter Pin : </label>
+          <input type="number" id="deposit-pin" />
           <button onclick="deposit()">Deposit</button>
           <button onclick="goMenu()">Cancel</button>
           <p id="deposit-error" class="error"></p>
@@ -80,21 +125,18 @@
         </div>
         
         <div id="mini-statement-screen" class="hidden">
+          <label for="statement-pin">Enter Pin : </label>
+          <input type="number" id="statement-pin" />
+          <button onclick="statement()">Check</button>
+          <button onclick="goMenu()">Cancel</button>
+        </div>
+
+        <div id="mini-statement-screen-2" class="hidden">
           <h2>Mini Statement</h2>
           <div id="mini-statement" class="statement-box"></div>
           <button onclick="goMenu()">Back To Main Menu</button>
         </div>
         
-        <div id="transfer-funds-screen" class="hidden">
-          <h2>Transfer Funds</h2>
-          <label for="transfer-account">To Account Number:</label>
-          <input type="text" id="transfer-account" placeholder="Account Number" />
-          <label for="transfer-amount">Amount:</label>
-          <input type="number" id="transfer-amount" />
-          <button onclick="transferFunds()">Transfer</button>
-          <button onclick="goMenu()">Cancel</button>
-          <p id="transfer-error" class="error"></p>
-        </div>
 
         <div id="others-screen" class="hidden">
           <h2>Others</h2>
