@@ -44,7 +44,7 @@
           <button onclick="generateWithdrawOtp()">Generate OTP</button>
           <div id="withdraw-otp-section" class="hidden">
             <label for="withdraw-otp">Enter OTP : </label>
-            <input type="number" id="withdraw-otp" />
+            <input type="password" id="withdraw-otp" />
             <button onclick="withdraw()">Withdraw</button>
           </div>
           <button onclick="goMenu()">Cancel</button>
@@ -70,7 +70,7 @@
   <button onclick="generateTransferOtp()">Generate OTP</button>
   <div id="transfer-otp-section" class="hidden">
     <label for="transfer-otp">Enter OTP : </label>
-    <input type="number" id="transfer-otp" />
+    <input type="password" id="transfer-otp" />
     <button onclick="transferFunds()">Transfer</button>
   </div>
   <button onclick="goMenu()">Cancel</button>
@@ -94,7 +94,7 @@
           <label for="deposit-amount">Amount : </label>
           <input type="number" id="deposit-amount" />
           <label for="deposit-pin">Enter Pin : </label>
-          <input type="number" id="deposit-pin" />
+          <input type="password" id="deposit-pin" />
           <button onclick="deposit()">Deposit</button>
           <button onclick="goMenu()">Cancel</button>
           <p id="deposit-error" class="error"></p>
